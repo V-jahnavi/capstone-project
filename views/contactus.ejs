@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+  body{
+  background-image: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg");
+  backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+h1{
+  color: black;
+  font-size: 50px;
+}
+</style>
+</head>
+<body method="GET" action="/contactus">
+    <center>
+<h1 align="center">Contact Us</h1><br><br><br>
+<div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."><br><br>
+
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br><br>
+
+    <label for="country">Country</label><br>
+    <select id="country" name="country"><br>
+      <option value="australia">India</option>
+      <option value="canada">Australia</option>
+      <option value="usa">USA</option>
+    </select><br><br>
+
+    <label for="feedback">Subject</label><br>
+    <textarea id="feedback" name="feedback" placeholder="Write something.." style="height:200px"></textarea><br><br>
+
+    <!--<input type="submit" value="Submit"><br>-->
+
+  </form>
+  <form method="GET" action="/thankyou">
+    <input type="submit">
+  </form>
+  </center>
+</div>
+</body>
+</html>
+

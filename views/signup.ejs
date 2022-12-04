@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+  background-image: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg");
+  backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+  form{
+    height: 35rem;
+    width:35rem;
+    margin: auto;
+    font-size:20px;
+    color:ghostwhite;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+</style>
+</head>
+<body>
+<!--<div id="id01" class="modal">-->
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+  <form method="GET" action="/signupSubmit">
+    <div class="container">-
+      <h1>Sign Up</h1><br>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="username"><b>username</b></label><br>
+      <input type="text" placeholder="Enter username" name="username" required><br><br>
+
+      <label for="password"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="password" required><br><br>
+
+      <label for="repeatPassword"><b>Repeat Password</b></label><br>
+      <input type="password" placeholder="repeatPassword" name="repeatPassword" required><br><br>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup" >Sign Up</button>
+        <!--<button onclick="login">submit</button>-->
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+

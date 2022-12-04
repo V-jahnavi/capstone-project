@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background-image: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg");
+backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+form{
+height:30rem;
+    width:35rem;
+    font-size: 20px;
+    margin: auto;
+    color:ghostwhite;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+</style>
+</head>
+<body>
+<form method="GET" action="/loginSubmit">  
+        <div class="container"><br>
+        <h1>Login</h1><br>
+            <label>Username : </label><br>
+            <input type="text" placeholder="Enter Username" name="username" required><br><br>
+            <label>Password : </label><br>
+            <input type="password" placeholder="Enter Password" name="password" required><br><br>
+            <button type="submit">Login</button><br><br>
+            <input type="checkbox" checked="checked"> Remember me<br><br>
+            <button type="button" class="cancelbtn"> Cancel</button><br><br>
+            Forgot <a href="#"> password? </a>
+        </div>  
+    </form>     
+</body>
+</html>

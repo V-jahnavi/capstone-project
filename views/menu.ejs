@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            img {
+                border-radius: 25px;
+                height: 250;
+                padding: 5px 3px;
+                width: 250;
+            }
+            td {
+                padding: 3px;
+            }
+            code {
+                display: block;
+                font-size: large;
+                width: auto;
+            }
+            button {
+                background-color: green;
+                border: 2px solid lightgray;
+                border-radius: 16px;
+                color: whitesmoke;
+                font-size: medium;
+                padding: 3px 16px;
+            }
+            button:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+</html>
+<div style="text-align: center;">
+    <h1>Menu</h1>
+</div>
+<div style="text-align: center; margin-left: 8%; margin-top: 1%;">
+    <table>
+        <% products.forEach((pdt)=> { %>
+        <tr style="display: inline-flex; padding: 16px;">
+            <% let itemname = pdt.data().itemname %>
+            <% let imageurl = pdt.data().imageurl %>
+            <% let itemcost = pdt.data().itemcost %>
+            <% let itemid = pdt.data().itemid %>
+            <td style="text-align: center;">
+                <form method="GET" action="/addToCart">
+                    <img src="<%= imageurl %>" target="_blank">
+                    <br><br>
+                    <code><%= itemname %></code>
+                    <code>₹<%= itemcost %></code>
+                    <input type="text" name="itemname" value="<%= itemname %>" hidden>
+                    <input type="text" name="itemcost" value="<%= itemcost %>" hidden>
+                    <button type="submit" name="addToCartBtn" value="<%= itemid %>">+ Add</button>
+                </form>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</div>
+
